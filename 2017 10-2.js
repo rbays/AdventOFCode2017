@@ -9,6 +9,8 @@ var skip = 0,
 	position = 0,
 	rawInput = document.body.children[0].innerText.trim(),
 	input = [];
+	//debug
+	//rawInput = "1,2,3";
 	for (i = 0; i < rawInput.length; i++){
 		input.push(rawInput.charCodeAt(i));
 	}

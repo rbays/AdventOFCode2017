@@ -10,8 +10,8 @@ var skip = 0,
 	input = document.body.children[0].innerText.trim().split(',');
 
 	//debug
-	input = [3, 4, 1, 5];
-	list = [0, 1, 2, 3, 4];
+	//input = [3, 4, 1, 5];
+	//list = [0, 1, 2, 3, 4];
 
 	
 for (i = 0; i < input.length; i++){
@@ -23,11 +23,8 @@ for (i = 0; i < input.length; i++){
 	for (j = 0; j < input[i]; j++){
 		list[(position + j)%list.length] = sublist[j];
 	}
-	console.log(position + "," + input[i] + "," + skip);
-	position = (position+input[i] + skip)%list.length;
+	position = (+position + +input[i] + +skip)%list.length;
 	
-	console.log(position);
 	skip += 1;
-	console.log(list.join(','));
 }
 console.log(list[0]*list[1]);
